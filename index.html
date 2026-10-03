@@ -3,10 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Udita Sen, software engineer building backend services and real-time data platforms. 6+ years, 4+ at PayPal. Open to relocation within and outside India.">
+<meta name="description" content="Udita Sen, backend and data platform engineer. 6+ years building real-time data platforms, streaming pipelines and high-volume APIs, 4+ at PayPal. Open to relocation within and outside India.">
 <meta property="og:title" content="Udita Sen · Backend &amp; Data Platform Engineer">
-<meta property="og:description" content="Event-driven data platforms, streaming pipelines and high-volume APIs. 7.5B+ records a day at PayPal.">
+<meta property="og:description" content="Real-time distributed systems: 7.5B+ records a day, batch to streaming in 10 minutes, ~$4M a year saved.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://uditascloud.github.io/">
+<meta property="og:image" content="https://uditascloud.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://uditascloud.github.io/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D1530'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='34' fill='%23FFB020'%3EU%3C/text%3E%3Ccircle cx='49' cy='15' r='5' fill='%2393A6FF'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>Udita Sen</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -327,6 +335,17 @@ footer .wrap { padding-block: 18px 28px; display: flex; justify-content: space-b
 .edu-head { display: flex; align-items: center; gap: 12px; }
 @media (max-width: 900px) { .learn { grid-template-columns: 1fr; } }
 
+/* Writing */
+#writing { padding-top: 0; }
+.post { display: flex; flex-direction: column; gap: 10px; padding: 28px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); text-decoration: none; color: var(--ink); max-width: 760px; transition: transform .2s ease, border-color .2s ease; }
+.post:hover { transform: translateY(-3px); border-color: var(--accent); }
+.post-meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.post-meta span:first-child { color: var(--accent); }
+.post h3 { font-size: clamp(22px, 2.6vw, 28px); font-weight: 800; line-height: 1.2; }
+.post p { color: var(--muted); max-width: 62ch; }
+.post-cta { color: var(--accent); font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .post { transition: none; } .post:hover { transform: none; } }
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero .wrap, .contact .wrap { grid-template-columns: 1fr; }
@@ -358,6 +377,7 @@ footer .wrap { padding-block: 18px 28px; display: flex; justify-content: space-b
       <li><a href="#craft">DSA</a></li>
       <li class="opt"><a href="#experience">Experience</a></li>
       <li class="opt"><a href="#skills">Skills</a></li>
+      <li class="opt"><a href="#writing">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -641,6 +661,21 @@ footer .wrap { padding-block: 18px 28px; display: flex; justify-content: space-b
       </div>
     </div>
   </section>
+  <section class="block" id="writing">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Writing</span>
+        <h2>Notes from the warehouse</h2>
+      </div>
+      <a class="post" href="blog/bigquery-cost.html">
+        <div class="post-meta"><span>Data warehousing</span><span>Oct 2026 · 5 min read</span></div>
+        <h3>How we cut BigQuery reporting costs by 60%</h3>
+        <p>We didn't buy anything or rewrite the reports. We redesigned the warehouse around how people actually query it, and saved roughly $4M a year.</p>
+        <span class="post-cta">Read the post →</span>
+      </a>
+    </div>
+  </section>
+
 
 
   <section class="block alt" id="education">
@@ -708,7 +743,7 @@ footer .wrap { padding-block: 18px 28px; display: flex; justify-content: space-b
 <script>
   // Edit these links. Any left empty is hidden.
   const LINKS = {
-    "LinkedIn": "",
+    "LinkedIn": "https://www.linkedin.com/in/udita-sen/",
     "GitHub": "https://github.com/uditascloud",
     "LeetCode": "https://leetcode.com/u/user4137q/",
     "Resume": "resume.pdf"
@@ -790,5 +825,6 @@ footer .wrap { padding-block: 18px 28px; display: flex; justify-content: space-b
   tick();
 </script>
 
+<script data-goatcounter="https://uditasen.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
